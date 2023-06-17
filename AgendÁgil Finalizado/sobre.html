@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <title>AGENDAMENTO</title>
+    <link rel="stylesheet" href="segundo.css" />
+    <link rel="stylesheet" href="estilo.css">
+  </head>
+  <body>
+
+    <div class="centered-text">
+        <section>
+            <h1>Sobre a ETE - Agendamento de Laboratório de Aula</h1><br/>
+            <p>Bem-vindo ao sistema de agendamento de laboratório de aula da ETE - Advogado José David Gil Rodrigues. Nossa plataforma foi projetada para facilitar o processo de reserva de laboratórios, permitindo que professores otimizem seu tempo e aproveitem ao máximo os recursos disponíveis.</p>
+            <p>Na ETE, acreditamos na importância do aprendizado prático e experimental, e nossos laboratórios de aula são uma parte fundamental desse processo. Com o nosso sistema de agendamento, você terá a oportunidade de reservar os laboratórios necessários para realizar atividades práticas, experimentos científicos, projetos de pesquisa e muito mais.</p>
+            <p>Com a nossa plataforma intuitiva e amigável, você poderá Navegar pelas opções disponíveis, verificar a disponibilidade de cada laboratório, e faça sua reserva com apenas alguns cliques.</p>
+            <p>Nossa equipe está empenhada em garantir que todos os professores tenham acesso igualitário aos recursos dos laboratórios. Portanto, é importante seguir as políticas e diretrizes estabelecidas para o uso adequado dos espaços.</p>
+            <p>Estamos comprometidos em fornecer um ambiente de aprendizagem enriquecedor e eficiente na ETE. Com o nosso sistema de agendamento de laboratório de aula, esperamos facilitar suas experiências acadêmicas, permitindo que você aproveite ao máximo as oportunidades práticas oferecidas pela escola.</p>
+        </section>
+    </div>  
+
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="logo_item">
+        <i class="bx bx-menu" id="sidebarOpen"></i>
+        <img src="img2/agendar.webp" alt=""></i>AgendÁgil
+      </div>
+      <div class="search_bar">
+      </div>
+      <div class="navbar_content">
+        <i class="bi bi-grid"></i>
+        <i class='bx bx-sun' id="darkLight"></i>
+        <img src="img2/perfil.png" alt="Botão" class="profile" id="botao" onclick="showOptions()">
+        <ul id="options">
+          <li><button href="#">Conta</button></li>
+          <li><button href="#" onclick="Perfil()">Editar perfil</button></li>
+          <li><button onclick="Sair()" href="#">Sair</button></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- sidebar -->
+    <nav class="sidebar">
+      <div class="menu_content">
+        <ul class="menu_items">
+          <div class="menu_title menu_dahsboard"></div>
+          <!-- duplicate or remove this li tag if you want to add or remove navlink with submenu -->
+          <!-- start -->
+          <li class="item">
+            <div href="#" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-home-alt"></i>
+              </span>
+              <span class="navlink">Home</span>
+              <i class="bx bx-chevron-right arrow-left"></i>
+            </div>
+            <ul class="menu_items submenu">
+                <li><button class="nav_link sublink" onclick="Agendamento()">Agendamento</button></li>
+                <li><button class="nav_link sublink">Horários</button></li>
+                <li><button class="nav_link sublink">Aulas</button></li>
+            </ul>
+          </li>
+          <!-- end -->
+          <!-- duplicate this li tag if you want to add or remove  navlink with submenu -->
+          <!-- start -->
+
+          <ul class="menu_items">
+            <div class="menu_title menu_setting"></div>
+            <li class="item">
+              <a href="#" class="nav_link">
+                <span class="navlink_icon">
+                  <i class="bx bx-flag"></i>
+                </span>
+                <button class="navlink">Configurações</button>
+              </a>
+            </li>
+            <li class="item">
+              <a href="#" class="nav_link">
+                <span class="navlink_icon">
+                  <i class="bx bx-layer"></i>
+                </span>
+                <button class="navlink" onclick="Sobre()">Sobre</button>
+              </a>
+            </li>
+          </ul>
+        <!-- Sidebar Open / Close -->
+        <div class="bottom_content">
+          <div class="bottom expand_sidebar">
+            <span> Abrir</span>
+            <i class='bx bx-log-in' ></i>
+          </div>
+          <div class="bottom collapse_sidebar">
+            <span> Fechar</span>
+            <i class='bx bx-log-out'></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="função.js"></script>
+  </body>
+</html>

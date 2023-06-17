@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <title>AGENDAMENTO</title>
+    <link rel="stylesheet" href="segundo.css" />
+    <link rel="stylesheet" href="estilo.css">
+  </head>
+  <body>
+
+    <div class="containerP">
+  
+      <form class="form3">
+        <div class="salas">
+          <div class="option">
+              <input class="input" type="radio" name="btn" value="option1" checked="">
+              <div class="btn">
+              <span class="span">Laboratório Ling.</span>
+            </div>
+          </div>
+            <div class="option">
+              <input class="input" type="radio" name="btn" value="option2">
+              <div class="btn">
+              <span class="span">Laboratório Infor.</span>
+            </div>  
+          </div>
+        </div>
+
+        <div class="semanas">
+          <div class="opcao">
+            <input class="input2" type="radio" name="btn1" value="option3">
+            <div class="btn2">
+              <span class="span2">Seg</span>
+            </div>  
+          </div>
+          <div class="opcao">
+            <input class="input2" type="radio" name="btn1" value="option4" checked="">
+            <div class="btn2">
+              <span class="span2">Ter</span>
+            </div>
+          </div>
+          <div class="opcao">
+            <input class="input2" type="radio" name="btn1" value="option5" checked="">
+            <div class="btn2">
+              <span class="span2">Qua</span>
+            </div>
+          </div>
+          <div class="opcao">
+            <input class="input2" type="radio" name="btn1" value="option6" checked="">
+            <div class="btn2">
+              <span class="span2">Qui</span>
+            </div>
+          </div>
+          <div class="opcao">
+            <input class="input2" type="radio" name="btn1" value="option7" checked="">
+            <div class="btn2">
+              <span class="span2">Sex</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="container3">
+        <div class="horarios">
+
+          <div class="input-agendar">
+            <label class="cl-checkbox">
+              <input type="checkbox" th:field="*{status}">
+              <span></span>
+            </label>
+              <label class="lbl-hora-aula"  th:field="*{horario}">18:20 / 19:00</label>
+              <input type="text" placeholder="LIVRE" th:field="*{nome}">
+          </div>
+  
+          <div class="input-agendar">
+            <label class="cl-checkbox">
+              <input type="checkbox" th:field="*{status}">
+              <span></span>
+            </label>
+              <label class="lbl-hora-aula" th:for="nome">19:00 / 19:40</label>
+              <input type="text" placeholder="LIVRE" th:field="*{nome}">
+          </div>
+  
+          <div class="input-agendar">
+            <label class="cl-checkbox">
+              <input type="checkbox" th:field="*{status}">
+              <span></span>
+            </label>
+              <label class="lbl-hora-aula" th:for="disciplina">19:40 / 20:20</label>
+              <input type="text" placeholder="LIVRE" th:field="*{disciplina}">
+          </div>
+  
+          <div class="input-agendar">
+            <label class="cl-checkbox">
+              <input type="checkbox" th:field="*{status}">
+              <span></span>
+            </label>
+              <label class="lbl-hora-aula" th:for="horario">20:20 / 21:00</label>
+              <input type="text" placeholder="LIVRE" th:field="*{horario}">
+          </div>
+  
+          <div class="input-agendar">
+            <label class="cl-checkbox">
+              <input type="checkbox" th:field="*{status}">
+              <span></span>
+            </label>
+              <label class="lbl-hora-aula" th:for="horario">21:00 / 21:40</label>
+              <input type="text" placeholder="LIVRE" th:field="*{horario}">
+          </div>
+        </div>
+        <button class="butao" type="submit">AGENDAR</button>  
+      </form>
+    </div> 
+      </div>
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="logo_item">
+        <i class="bx bx-menu" id="sidebarOpen"></i>
+        <img src="img2/agendar.webp" alt=""></i>AgendÁgil
+      </div>
+      <div class="search_bar">
+      </div>
+      <div class="navbar_content">
+        <i class="bi bi-grid"></i>
+        <i class='bx bx-sun' id="darkLight"></i>
+        <img src="img2/perfil.png" alt="Botão" class="profile" id="botao" onclick="showOptions()">
+        <ul id="options">
+          <li><button href="#">Conta</button></li>
+          <li><button href="#" onclick="Perfil()">Editar perfil</button></li>
+          <li><button onclick="Sair()" href="#">Sair</button></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- sidebar -->
+    <nav class="sidebar">
+      <div class="menu_content">
+        <ul class="menu_items">
+          <div class="menu_title menu_dahsboard"></div>
+          <!-- duplicate or remove this li tag if you want to add or remove navlink with submenu -->
+          <!-- start -->
+          <li class="item">
+            <div href="#" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-home-alt"></i>
+              </span>
+              <span class="navlink">Home</span>
+              <i class="bx bx-chevron-right arrow-left"></i>
+            </div>
+            <ul class="menu_items submenu">
+              <li><button class="nav_link sublink" onclick="Agendamento()">Agendamento</button></li>
+              <li><button class="nav_link sublink">Horários</button></li>
+              <li><button class="nav_link sublink">Aulas</button></li>
+          </ul>
+          </li>
+          <!-- end -->
+          <!-- duplicate this li tag if you want to add or remove  navlink with submenu -->
+          <!-- start -->
+
+        <ul class="menu_items">
+          <div class="menu_title menu_setting"></div>
+          <li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-flag"></i>
+              </span>
+              <button class="navlink">Configurações</button>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-layer"></i>
+              </span>
+              <button class="navlink" onclick="Sobre()">Sobre</button>
+            </a>
+          </li>
+        </ul>
+        <!-- Sidebar Open / Close -->
+        <div class="bottom_content">
+          <div class="bottom expand_sidebar">
+            <span> Abrir</span>
+            <i class='bx bx-log-in' ></i>
+          </div>
+          <div class="bottom collapse_sidebar">
+            <span> Fechar</span>
+            <i class='bx bx-log-out'></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="função.js"></script>
+  </body>
+</html>
